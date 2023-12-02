@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACounter</title>
+    <script src="https://kit.fontawesome.com/b4b915eefc.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <h1><span style="color: rgb(159, 238, 41);">A</span><span style="color: #00b7cb;">C</span>ounter</h1>
+</header>
+
+<main>
+    <nav class="navbar">
+        <ul>
+            <li id="reset" onclick="reset()" title="Reset count to 0">Reset</li>
+            <li id="add" onclick="increase()" title="add specific amount to the count">Add</li>
+            <li id="remove" onclick="decrease()" title="Removes specific amount from the count">Remove</li>
+            <li id="limit" onclick="limit()" title="Set limit to the count">Limit</li>
+            <li id="pace" onclick="pace_start()" title="Increase the count by specific pace">Pace</li>
+            <i class="fa-solid fa-gear" id="settings" onclick="popShow()" title="Settings"></i>
+        </ul>
+    </nav>
+
+    <div class="number">
+        <div class="centered">
+            <button id="add" onclick="remove()">-</button>
+            <h1 id="label">0</h1>
+            <button id="remove" onclick="add()">+</button><br><br>
+            <h2 id="limit-text"></h2>
+
+        </div>
+    </div>
+    
+
+    <div class="popContainer">
+        <div class="popup" id="popup">
+            
+            <h1 class="popText">Sound</h1>
+            <input type="checkbox" class="check" value="off" id="checkPop" title="Turn sound On/Off" checked>
+            <i class="fa-solid fa-arrows-rotate" id="resestIco" title="Reset settings" onclick="resetPop()"></i>
+            <br><br>
+            
+            <h1 class="popText">Pace</h1>
+            <input type="number" id="paceNum"><label id="ms" max="999999999" min="0">ms</label>
+
+            <button id="closeBtn" title="Save settings">Save</button>
+            <button id="cancelBtn" title="Discord changes" onclick="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    
+
+
+</main>
+
+
+
+<audio src="mp3.wav" id="audio"></audio>
+
+<script src="index.js"></script>
+</body>
+</html>

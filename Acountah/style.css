@@ -1,0 +1,280 @@
+::selection{
+    color: rgb(85, 244, 244);
+    background-color: rgba(8, 127, 0, 0.267);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #292929;
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    height: 95vh;
+    width: 100%;
+    scroll-behavior:smooth;
+}
+
+.header{
+    text-align: center;
+    color: #00e5ffa0;
+}
+
+.navbar  ul{
+    list-style: none;
+    background-color: hsl(180, 2%, 13%);
+    color: #37d644;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li:hover{
+    background-color: hsl(180, 3%, 8%);
+    cursor: pointer;
+}
+
+.navbar li{
+    float: left;
+    padding: 10px;
+}
+
+.fa-solid.fa-gear{
+    float:right;
+    margin-right: 12px;
+    margin-top: 11px;
+    color: #37ff00ba;
+}
+
+.fa-solid.fa-gear:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.17s;
+}
+
+.fa-solid.fa-gear:not(hover){
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.17s;
+}
+
+
+.number{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered{
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centered #add{
+    display: inline;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 45px;
+    border: none;
+    background-color: rgb(190, 190, 190);
+    cursor: pointer;
+
+}
+#label{
+    text-align: center;
+    margin-right: 200px;
+    margin-left: 200px;
+
+
+}
+
+
+.centered #add:hover , .centered #remove:hover{
+    background-color: #777777;
+}
+
+.centered #remove{
+    display: inline;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 45px;
+    border: none;
+    background-color: rgb(190, 190, 190);
+    cursor: pointer;
+
+}
+
+.centered h1{
+    display: inline;
+    font-size: 80px;
+}
+
+.navbar li:active{
+    background-color: hsl(180, 1%, 36%);
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(207, 221, 7);
+    font-weight: 500;
+    float: right;
+}
+
+.centered #add:active, .centered #remove:active{
+    background-color: #4b4b4b;
+}
+
+
+
+@media screen and (max-width:600px){
+    #label{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    body{
+        overflow: auto;
+    }
+    .number{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-height:600px) {
+    #label{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .centered{
+        text-align: center;
+    }
+
+    #limit-text{
+        margin: 0;
+        text-align: center;
+    }
+    
+    .number{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+.popContainer{
+    display: flex;
+    justify-content: center;
+    color: #37d644;
+}
+
+.popup{
+    display: none;
+    position: relative;
+    top: -400px;
+    width: 350px;
+    height: 220px;
+    background-color: rgb(57, 57, 57);
+    border-radius: 20px;
+    padding-left: 9px;
+    padding-right: 9px;
+
+}
+
+.popText{
+    display: inline;
+    text-align: center;
+}
+
+.check{
+    width: 17px;
+    height: 19px;
+    cursor: pointer;
+}
+
+#paceNum{
+    width: 50px;
+    background-color: rgb(143, 143, 143);
+    border: none;
+}
+
+#paceSubmit{
+    border-radius: 15px;
+    border: none;
+    margin-left: 5px;
+    height: 17px;
+}
+
+#closeBtn:active , #cancelBtn:active{
+    background-color: #8e8e8e;
+}
+
+#ms{
+    color: #37d644;
+    font-size: 25px;
+    margin-left: 3px;
+}
+
+#closeBtn{
+    display: block;
+    position: relative;
+    top: 30px;
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+    height: 24px;
+    border-radius: 13px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(190, 190, 190);
+}
+
+#cancelBtn{
+    display: block;
+    position: relative;
+    background-color: rgb(190, 190, 190);
+    top: 10px;
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+    height: 24px;
+    border-radius: 13px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.fa-solid.fa-arrows-rotate{
+    position: relative;
+    top: 10px;
+    right: 5px;
+    float: right;
+    font-size: 1.4em;
+    color: #37d644;
+}
+
+.fa-solid.fa-arrows-rotate:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.17s;
+}
+
+.fa-solid.fa-arrows-rotate:not(hover){
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.17s;
+}
